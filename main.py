@@ -19,8 +19,8 @@ def run():
     try:
       print('I\'m Listening..')
       if not once:
-        _, responses = dataset('wake')
-        respone(responses)
+        _, randomResponse, _ = dataset('wake')
+        respone(randomResponse)
       Matching()
       once = True
     except:

@@ -17,22 +17,21 @@ def Matching():
         with open('dataset.json') as file: # read dataset
           data = load(file) # load the json file
           for key in data: # loop in all data keys 
-            keys, responses = dataset(key)
+            keys, randomResponse, responses = dataset(key)
             if not keys: continue # check if the command have keys or not if yes skip this key
             for keyword in keys: # loop inside all keys
               keyword = keyword.lower()
               if keyword in input_text: # check if the input text from mic matches with any key
                 understand = True # means that the command is exist in the dataset 
                 if responses:
-                  output = responses # get random response from key response
-                  respone(output) # output the chosin test as a sound
+                  respone(randomResponse) # output the choosing response as a sound
                 
                 # Extra Response
                 if key == 'your_name':
                   respone_test = VoiceProcess()
-                  _, responses = dataset('honor')
+                  _, randomResponse, _ = dataset('honor')
                   if respone_test is not None:
-                    return respone(responses)
+                    return respone(randomResponse)
                 if key == 'wikipedia':
                   try:
                     query = input_text
@@ -41,18 +40,18 @@ def Matching():
                     data = summary(query, sentences=1)
                     if data: return respone(data)
                     else:
-                      _, responses = dataset('unavailable')
-                      respone(responses)
+                      _, randomResponse, _ = dataset('unavailable')
+                      respone(randomResponse)
                   except:
-                    _, responses = dataset('RequestError')
-                    respone(responses)
+                    _, randomResponse, _ = dataset('RequestError')
+                    respone(randomResponse)
                     
                 return
               
         
         if not understand:
-          _, responses = dataset('no_sound')
-          return respone(responses)
+          _, randomResponse, _ = dataset('no_sound')
+          return respone(randomResponse)
       else:
         return
   except:

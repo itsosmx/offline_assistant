@@ -57,7 +57,7 @@
   },
   "have_friend": {
     "responses": ["I think friendship might be a human construct"],
-    "keys": ["do you have a friends", "have friends", "your friend"]
+    "keys": ["do you have a friends", "have friends", "your friend", "do you have a friend"]
   },
   "wikipedia": {
     "responses": null,
