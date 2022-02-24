@@ -1,0 +1,70 @@
+{
+  "wake": {
+    "responses": ["Hello there", "Welcome, how can i help you"],
+    "keys": ["hello", "hi there"]
+  },
+  "unavailable": {
+    "responses": ["Sorry, i can't do that at this moment"],
+    "keys": null
+  },
+  "no_sound": {
+    "responses": ["A little louder please.", "I'm Sorry. Say that again", "I'm sorry. I didn't quite catch that?"],
+    "keys": null
+  },
+  "RequestError": {
+    "responses": ["Sorry, i don't have any connection to the enternet to do this request."],
+    "keys": null
+  },
+  "doing_today": {
+    "responses": ["Well, us robots do not feel, but if i could feel i would say i am so happy to be here.", "Thank you for asking, i am so happy to talk to you"],
+    "keys": ["doing today", "how are you doing today", "you feel", "how are you"]
+  },
+  "do_play": {
+    "responses": ["Well, i love games and i would love to play it as soon as i can"],
+    "keys": ["you play", "gamer", "love games"]
+  },
+  "your_name": {
+    "responses": ["My name is Musa, What is your name?"],
+    "keys": ["your name", "who are you"]
+  },
+  "age": {
+    "responses": ["I don't have an age, or a gender", "I don't gave an age, since i don't really experience time."],
+    "keys": ["how old are you", "your age", "age", "gender"]
+  },
+  "you_do": {
+    "responses": ["Well, i am designed as a human robot, to communicate with people like you."],
+    "keys": ["can you do", "you do", "your job"]
+  },
+  "thanks": {
+    "responses": ["You're welcome", "No problem.", "My pleasure.", "Glad to help."],
+    "keys": ["thank", "thank you", "thanks"]
+  },
+  "do_like": {
+    "responses": ["Well, as a robot, We do not like or love. These are human habits."],
+    "keys": ["do you like", "do you love", "you love"]
+  },
+  "eat": {
+    "responses": ["Well, i don't need food. i would have to watch you."],
+    "keys": ["eat", "like to eat", "food", "favorite food"]
+  },
+  "meet_you": {
+    "responses": ["Nice to meet you too."],
+    "keys": ["meet you", "meet", "to meet you"]
+  },
+  "weekend_plan": {
+    "responses": ["Well, I think i will hangout with my charger.", "My friends are gonna visit me this weekend. i am just kidding , i just will stay here to talk to others like you"],
+    "keys": ["any plans for the weekend", "your weekend", "weekend", "plan for weekend"]
+  },
+  "have_friend": {
+    "responses": ["I think friendship might be a human construct"],
+    "keys": ["do you have a friends", "have friends", "your friend"]
+  },
+  "wikipedia": {
+    "responses": null,
+    "keys": ["what do you know about", "know about", "search about", "search for"]
+  },
+  "honor": {
+    "responses": ["Nice to meet you", "It's my pleasure to talk to you"],
+    "keys": null
+  }
+}
