@@ -19,7 +19,7 @@ def run():
     try:
       print('I\'m Listening..')
       if not once:
-        _, randomResponse, _ = dataset('wake')
+        _, randomResponse, _, _ = dataset('wake')
         respone(randomResponse)
       Matching()
       once = True

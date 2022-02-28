@@ -15,11 +15,11 @@
 #   if recognizer.AcceptWaveform(data):
 #     print(f"Result: {recognizer.Result()}")
 
-import json
+# import json
 
-f = open('dataset.json')
-data = json.load(f)
+# f = open('dataset.json')
+# data = json.load(f)
 
-for key in data:
-  for keyword in data[key]['keys']:
-    print(keyword)
+# for key in data:
+#   for keyword in data[key]['keys']:
+#     print(keyword)
