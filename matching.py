@@ -1,4 +1,4 @@
-from engine import respone 
+from engine import response 
 from voice_process import VoiceProcess
 from json import load
 from utils import dataset
@@ -17,7 +17,7 @@ def Matching():
         with open('dataset.json') as file: # read dataset
           data = load(file) # load the json file
           for key in data: # loop in all data keys 
-            keys, randomResponse, responses, action = dataset(key)
+            keys, random_response, responses, action = dataset(key)
             if not keys: continue # check if the command have keys or not, if yes skip to sacond loop
             for keyword in keys: # loop inside all keys
               keyword = keyword.lower()
@@ -28,33 +28,33 @@ def Matching():
                   print('yup')
                   getattr(Actions, action)
                 if responses:
-                  respone(randomResponse) # output the choosing response as a sound
+                  response(random_response) # output the choosing response as a sound
                 # Extra Response
                 if key == 'your_name':
-                  respone_test = VoiceProcess()
-                  _, randomResponse, _, _ = dataset('honor')
-                  if respone_test is not None:
-                    return respone(randomResponse)
+                  response_test = VoiceProcess()
+                  _, random_response, _, _ = dataset('honor')
+                  if response_test is not None:
+                    return response(random_response)
                 if key == 'wikipedia':
                   try:
                     query = input_text
                     for filter in keys:
                       query = input_text.replace(filter, "")
                     data = summary(query, sentences=1)
-                    if data: return respone(data)
+                    if data: return response(data)
                     else:
-                      _, randomResponse, _, _ = dataset('unavailable')
-                      respone(randomResponse)
+                      _, random_response, _, _ = dataset('unavailable')
+                      response(random_response)
                   except:
-                    _, randomResponse, _, _ = dataset('RequestError')
-                    respone(randomResponse)
+                    _, random_response, _, _ = dataset('RequestError')
+                    response(random_response)
                     
                 return
               
         
         if not understand:
-          _, randomResponse, _ = dataset('no_sound')
-          return respone(randomResponse)
+          _, random_response, _ = dataset('no_sound')
+          return response(random_response)
       else:
         return
   except:

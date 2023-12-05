@@ -1,6 +1,6 @@
 from datetime import datetime
 from utils import getJoke
-from engine import respone
+from engine import response
 
 class Actions:
   # def __init__(self, action_name):
@@ -9,12 +9,12 @@ class Actions:
   
   def get_date(self):
     Date = self.date.strftime("%x")
-    return respone(f'Date is {Date}')
+    return response(f'Date is {Date}')
   def get_today(self):
     Date = self.date.strftime("%A")
-    return respone(f'Today is {Date}')
+    return response(f'Today is {Date}')
   def get_time(self):
     Date = self.date.strftime("%I:%M %p")
-    respone(f'The time is {Date}')
+    response(f'The time is {Date}')
   def get_joke(self):
-    respone(getJoke())
+    response(getJoke())
